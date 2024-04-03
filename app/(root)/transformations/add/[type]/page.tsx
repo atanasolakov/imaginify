@@ -25,7 +25,7 @@ const AddTransformationTypePage = async ({ params: { type } }: SearchParamProps)
                 <TransformationForm
                     action="Add"
                     userId={user._id}
-                    type={transformation.type as TransformationTypeKey}
+                    type={transformation.type as any}
                     creditBalance={user.creditBalance}
                 />
             </section>
