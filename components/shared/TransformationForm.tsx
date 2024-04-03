@@ -50,16 +50,16 @@ const TransformationForm = ({ action, data = null}: TransformationFormProps) => 
         <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                 <FormField
-                    control={form.control}
-                    name="username"
+                    control={form.control as any}
+                    name="title"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Username</FormLabel>
+                            <FormLabel>Title</FormLabel>
                             <FormControl>
                                 <Input placeholder="shadcn" {...field} />
                             </FormControl>
                             <FormDescription>
-                                This is your public display name.
+                                Add title
                             </FormDescription>
                             <FormMessage />
                         </FormItem>
